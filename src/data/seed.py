@@ -74,7 +74,7 @@ def generate_employee_data(num_records):
     return employee_data
 
 db.create_collection("employees")
-employee_data = generate_employee_data(50)
+employee_data = generate_employee_data(70)
 db.employees.insert_many(employee_data)
 
 department_ids = {dept["name"]: dept["_id"] for dept in db.departments.find()}
